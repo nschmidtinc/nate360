@@ -1,37 +1,41 @@
 import React from 'react';
+// import * as safari from '../../hello360/hello360/static_assets/'
 import {
   AppRegistry,
   StyleSheet,
   Text,
+  Image,
   View,
 } from 'react-360';
 
 export default class hello360 extends React.Component {
   render() {
+    const resizeMode = 'stretch';
     return (
       <View style={{ display : 'flex'}} >
       <View style={{display: 'flex', flexDirection: 'row'}}>
       <View
          style={styles.greetingBox}>
-          <Text style={styles.greeting}>
-            Welcome to React 360 1
-          </Text>
+          <Image style={{flex: 1,
+          resizeMode, margin: 0
+          }} source={require('../hello360/static_assets/142543630.jpg')}></Image>
         </View>
         <View style ={styles.greetingBox}><Text>yo wassup12</Text>
         </View>
         <View
          style={styles.greetingBox}>
-          <Text style={styles.greeting}>
-            Welcome to React 360 2
-          </Text>
+          <Image style={{flex: 1,
+          resizeMode, margin: 0
+          }} source={require('../hello360/static_assets/142543630.jpg')}></Image>
         </View>
-        <View style ={styles.greetingBox}><Text>yo wassup11</Text>
+        <View style ={styles.greetingBox}>
+        <Text>yo wassup11</Text>
         </View>
         <View
          style={styles.greetingBox}>
-          <Text style={styles.greeting}>
-            Welcome to React 360 3
-          </Text>
+         <Image style={{flex: 1,
+          resizeMode, margin: 0
+          }} source={require('../hello360/static_assets/142543630.jpg')}></Image>
         </View>
         <View style ={styles.greetingBox}><Text>yo wassup10</Text>
         </View>
@@ -260,7 +264,7 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
   },
   greetingBox: {
-    padding: 20,
+    padding: 0,
     width: 250,
     height: 150,
     margin: 5,
